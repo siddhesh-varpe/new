@@ -1,0 +1,5 @@
+google-generativeai
+pandas
+matplotlib
+plotly
+numpy
