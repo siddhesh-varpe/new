@@ -1,0 +1,86 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_bac1341b [label="0: (global)()" name="27-01-2026::(global)" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_cc9cd87e [label="56: __init__()" name="27-01-2026::DenseBlock.__init__" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_3dcf7534 [label="39: __init__()" name="27-01-2026::DenseLayer.__init__" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_e612b4d7 [label="80: __init__()" name="27-01-2026::DexiNed.__init__" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_6f04f05e [label="148: __init__()" name="27-01-2026::SeamAutoEncoder.__init__" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_d3534599 [label="72: __init__()" name="27-01-2026::SingleScaleBlock.__init__" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_d938e23a [label="224: detect_gaps_dexined()" name="27-01-2026::detect_gaps_dexined" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_0c1c8ec9 [label="182: discover_gaps()" name="27-01-2026::discover_gaps" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_7ede77b4 [label="164: extract_seam_points()" name="27-01-2026::extract_seam_points" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_ebe9604b [label="16: preprocess_image()" name="27-01-2026::preprocess_image" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_a9495c21 [label="196: visualize_results()" name="27-01-2026::visualize_results" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_bac1341b -> node_d938e23a [color="#009E73" penwidth="2"];
+node_cc9cd87e -> node_3dcf7534 [color="#D55E00" penwidth="2"];
+node_cc9cd87e -> node_3dcf7534 [color="#D55E00" penwidth="2"];
+node_cc9cd87e -> node_3dcf7534 [color="#D55E00" penwidth="2"];
+node_e612b4d7 -> node_cc9cd87e [color="#CC79A7" penwidth="2"];
+node_e612b4d7 -> node_cc9cd87e [color="#CC79A7" penwidth="2"];
+node_e612b4d7 -> node_cc9cd87e [color="#CC79A7" penwidth="2"];
+node_e612b4d7 -> node_d3534599 [color="#CC79A7" penwidth="2"];
+node_e612b4d7 -> node_d3534599 [color="#CC79A7" penwidth="2"];
+node_e612b4d7 -> node_d3534599 [color="#CC79A7" penwidth="2"];
+node_d938e23a -> node_e612b4d7 [color="#56B4E9" penwidth="2"];
+node_d938e23a -> node_6f04f05e [color="#56B4E9" penwidth="2"];
+node_d938e23a -> node_0c1c8ec9 [color="#56B4E9" penwidth="2"];
+node_d938e23a -> node_7ede77b4 [color="#56B4E9" penwidth="2"];
+node_d938e23a -> node_ebe9604b [color="#56B4E9" penwidth="2"];
+node_d938e23a -> node_a9495c21 [color="#56B4E9" penwidth="2"];
+subgraph cluster_2596fca1 {
+    node_ebe9604b node_7ede77b4 node_0c1c8ec9 node_a9495c21 node_d938e23a node_bac1341b;
+    label="File: 27-01-2026";
+    name="27-01-2026";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_698ebda9 {
+        node_3dcf7534;
+        label="Class: DenseLayer";
+        name="DenseLayer";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_ed55b967 {
+        node_cc9cd87e;
+        label="Class: DenseBlock";
+        name="DenseBlock";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_684aaaa6 {
+        node_d3534599;
+        label="Class: SingleScaleBlock";
+        name="SingleScaleBlock";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_656e70d5 {
+        node_e612b4d7;
+        label="Class: DexiNed";
+        name="DexiNed";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_ed931a73 {
+        node_6f04f05e;
+        label="Class: SeamAutoEncoder";
+        name="SeamAutoEncoder";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+}
